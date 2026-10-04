@@ -1,0 +1,249 @@
+{
+ "char_gpt": {
+  "primary": {
+   "name": "Val perplexity",
+   "value": 6.563,
+   "better": "lower"
+  },
+  "metrics": {
+   "val_loss": 1.8815,
+   "bits_per_char": 2.714,
+   "tokens_per_sec": 25.7
+  },
+  "benchmark_seconds": 10.55,
+  "timestamp": 1791092928.325813,
+  "params": 1816896,
+  "param_mb": 7.3,
+  "load_seconds": 521.69,
+  "load_rss_delta_mb": 146.4,
+  "variant": "tinyshakespeare",
+  "device": "mps",
+  "avg_inference_ms": null,
+  "rss_mb": 652.3
+ },
+ "rag": {
+  "primary": {
+   "name": "Answer accuracy",
+   "value": 0.95,
+   "better": "higher"
+  },
+  "metrics": {
+   "hit@1": 0.95,
+   "hit@3": 1.0,
+   "MRR": 0.975,
+   "avg_retrieval_ms": 65.13,
+   "questions": 20,
+   "chunks": 30
+  },
+  "benchmark_seconds": 3.45,
+  "timestamp": 1791092921.3440871,
+  "params": 22713216,
+  "param_mb": 90.9,
+  "load_seconds": 10.38,
+  "load_rss_delta_mb": 1191.7,
+  "variant": "all-MiniLM-L6-v2",
+  "device": "mps",
+  "avg_inference_ms": null,
+  "rss_mb": 382.4
+ },
+ "llm": {
+  "primary": {
+   "name": "Grounded QA accuracy",
+   "value": 1.0,
+   "better": "higher"
+  },
+  "metrics": {
+   "avg_tokens_per_sec": 1.09,
+   "avg_response_ms": 19129.9,
+   "questions": 7,
+   "lora": true
+  },
+  "benchmark_seconds": 133.94,
+  "timestamp": 1791092645.503086,
+  "params": 1544803840,
+  "param_mb": 3091.8,
+  "load_seconds": 50.1,
+  "load_rss_delta_mb": -197.9,
+  "variant": "Qwen2.5-1.5B-Instruct + LoRA",
+  "device": "mps",
+  "avg_inference_ms": null,
+  "rss_mb": 217.1
+ },
+ "whisper": {
+  "primary": {
+   "name": "Word error rate",
+   "value": 0.0909,
+   "better": "lower"
+  },
+  "metrics": {
+   "real_time_factor": 0.809,
+   "asr_ms": 6888.4,
+   "audio_s": 8.51,
+   "hypothesis": "Welcome to Nimbus Court, please submit your expense claims within 30 days, and remember to enable multi-factor authentication on your laptop."
+  },
+  "benchmark_seconds": 14.69,
+  "timestamp": 1791092563.0168169,
+  "params": 72593920,
+  "param_mb": 290.4,
+  "load_seconds": 23.29,
+  "load_rss_delta_mb": 132.1,
+  "variant": "whisper-base",
+  "device": "mps",
+  "avg_inference_ms": null,
+  "rss_mb": 534.2
+ },
+ "yolo": {
+  "primary": {
+   "name": "Count-level F1",
+   "value": 0.941,
+   "better": "higher"
+  },
+  "metrics": {
+   "precision": 0.889,
+   "recall": 1.0,
+   "avg_ms": 345.4,
+   "fps": 2.9,
+   "images": 2
+  },
+  "benchmark_seconds": 8.11,
+  "timestamp": 1791092618.218241,
+  "params": 3157200,
+  "param_mb": 12.6,
+  "load_seconds": 16.43,
+  "load_rss_delta_mb": 103.6,
+  "variant": "yolov8n",
+  "device": "mps",
+  "avg_inference_ms": null,
+  "rss_mb": 246.3
+ },
+ "bert": {
+  "primary": {
+   "name": "Accuracy",
+   "value": 0.7,
+   "better": "higher"
+  },
+  "metrics": {
+   "macro_f1": 0.607,
+   "batch_ms": 4486.2,
+   "ms_per_sample": 149.54,
+   "samples": 30,
+   "confusion": [
+    [
+     10,
+     0,
+     0
+    ],
+    [
+     3,
+     1,
+     6
+    ],
+    [
+     0,
+     0,
+     10
+    ]
+   ]
+  },
+  "benchmark_seconds": 4.49,
+  "timestamp": 1791092684.978386,
+  "params": 167360261,
+  "param_mb": 669.4,
+  "load_seconds": 56.37,
+  "load_rss_delta_mb": -76.4,
+  "variant": "bert-base-multilingual-uncased-sentiment",
+  "device": "mps",
+  "avg_inference_ms": null,
+  "rss_mb": 127.2
+ },
+ "lstm_ae": {
+  "primary": {
+   "name": "F1 (point, \u00b13 tol)",
+   "value": 0.498,
+   "better": "higher"
+  },
+  "metrics": {
+   "precision": 0.339,
+   "recall": 0.956,
+   "roc_auc": 0.87,
+   "series": 5,
+   "threshold": 0.1535
+  },
+  "benchmark_seconds": 1.72,
+  "timestamp": 1791093174.743477,
+  "params": 119185,
+  "param_mb": 0.5,
+  "load_seconds": 0.46,
+  "load_rss_delta_mb": 16.7,
+  "variant": "LSTM-AE h64 z16 (cpu)",
+  "device": "mps",
+  "avg_inference_ms": null,
+  "rss_mb": 136.5
+ },
+ "two_tower": {
+  "primary": {
+   "name": "Recall@3 (held-out)",
+   "value": 1.0,
+   "better": "higher"
+  },
+  "metrics": {
+   "MRR": 0.88,
+   "recall@1": 0.76,
+   "baseline_sbert_R@3": 0.92,
+   "baseline_tfidf_R@3": 0.72
+  },
+  "comparison": {
+   "two_tower": {
+    "recall@1": 0.76,
+    "recall@3": 1.0,
+    "MRR": 0.88,
+    "ms": 16.46
+   },
+   "frozen_sbert": {
+    "recall@1": 0.64,
+    "recall@3": 0.92,
+    "MRR": 0.795,
+    "ms": 7.9
+   },
+   "tfidf": {
+    "recall@1": 0.4,
+    "recall@3": 0.72,
+    "MRR": 0.601,
+    "ms": 0.57
+   }
+  },
+  "benchmark_seconds": 0.63,
+  "timestamp": 1791093185.639054,
+  "params": 23501440,
+  "param_mb": 94.0,
+  "load_seconds": 2.44,
+  "load_rss_delta_mb": 140.3,
+  "variant": "all-MiniLM-L6-v2 + residual towers",
+  "device": "mps",
+  "avg_inference_ms": null,
+  "rss_mb": 168.5
+ },
+ "midi": {
+  "primary": {
+   "name": "In-scale note ratio",
+   "value": 0.886,
+   "better": "higher"
+  },
+  "metrics": {
+   "val_perplexity": 4.12,
+   "pitch_class_entropy": 2.567,
+   "unique_trigram_ratio": 0.884,
+   "samples": 6
+  },
+  "benchmark_seconds": 1293.72,
+  "timestamp": 1791094486.875526,
+  "params": 826496,
+  "param_mb": 3.3,
+  "load_seconds": 3.95,
+  "load_rss_delta_mb": 52.6,
+  "variant": "4L-128d event transformer",
+  "device": "mps",
+  "avg_inference_ms": null,
+  "rss_mb": 147.3
+ }
+}
